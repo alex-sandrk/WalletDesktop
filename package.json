@@ -1,6 +1,6 @@
 {
   "name": "lumerin-wallet-desktop",
-  "version": "1.1.31",
+  "version": "1.1.31-dev",
   "engines": {
     "node": ">=14"
   },
@@ -10,7 +10,7 @@
     "url": "https://lumerin.io"
   },
   "description": "Lumerin Wallet for desktop devices",
-  "repository": "https://github.com/Lumerin-protocol/WalletDesktop",
+  "repository": "https://github.com/alex-sandrk/WalletDesktop",
   "license": "MIT",
   "homepage": "./",
   "main": "public/electron.js",
