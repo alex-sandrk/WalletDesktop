@@ -116,6 +116,7 @@
   },
   "build": {
     "appId": "io.lumerin.wallet.desktop",
+    "generateUpdatesFilesForAllChannels": true,
     "productName": "Lumerin Wallet",
     "files": [
       ".env",
