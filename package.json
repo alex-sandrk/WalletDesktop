@@ -1,6 +1,6 @@
 {
   "name": "lumerin-wallet-desktop",
-  "version": "1.1.31-dev",
+  "version": "1.1.32",
   "engines": {
     "node": ">=14"
   },
@@ -132,7 +132,7 @@
       "include": "assets/installer.nsh"
     },
     "mac": {
-      "artifactName": "${name}.${ext}",
+      "artifactName": "${name}-${version}_arm.${ext}",
       "category": "public.app-category.finance",
       "icon": "./assets/lumerin.png",
       "extendInfo": {
@@ -146,7 +146,7 @@
       "publish": "github"
     },
     "linux": {
-      "artifactName": "${name}.${ext}",
+      "artifactName": "${name}-${version}.${ext}",
       "category": "Office;Finance",
       "target": [
         "deb"
@@ -155,7 +155,7 @@
       "publish": "github"
     },
     "win": {
-      "artifactName": "${name}.${ext}",
+      "artifactName": "${name}-${version}.${ext}",
       "target": "nsis",
       "icon": "./assets/lumerin.png",
       "legalTrademarks": "",

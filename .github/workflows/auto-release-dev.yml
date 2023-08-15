@@ -91,4 +91,4 @@ jobs:
       - name: Build
         run: npm run web-build
       - name: Publish
-        run: npm run r
+        run: npm run r -- --c.publish.channel=dev
