@@ -90,5 +90,15 @@ jobs:
         shell: bash
       - name: Build
         run: npm run web-build
-      - name: Publish
-        run: npm run r -- --c.extraMetadata.version=1.1.33-dev
+      - name: Publish Mac
+        if: matrix.target == 'macos'
+        run: npm run r -- --c.extraMetadata.version=${{github.ref_name}} -m
+      - name: Publish Mac arm
+        if: matrix.target == 'macos-arm'
+        run: npm run r -- --c.extraMetadata.version=${{github.ref_name}} -m --arm64
+      - name: Publish Linux
+        if: matrix.target == 'ubuntu'
+        run: npm run r -- --c.extraMetadata.version=${{github.ref_name}} -l
+      - name: Publish Windows
+        if: matrix.target == 'windows'
+        run: npm run r -- --c.extraMetadata.version=${{github.ref_name}} -w

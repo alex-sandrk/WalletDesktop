@@ -132,7 +132,7 @@
       "include": "assets/installer.nsh"
     },
     "mac": {
-      "artifactName": "${name}-${version}_arm.${ext}",
+      "artifactName": "${name}-${version}-${arch}.${ext}",
       "category": "public.app-category.finance",
       "icon": "./assets/lumerin.png",
       "extendInfo": {
