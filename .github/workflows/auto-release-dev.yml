@@ -91,4 +91,4 @@ jobs:
       - name: Build
         run: npm run web-build
       - name: Publish
-        run: npm run r -- --c.extraMetadata.channel=dev
+        run: npm run r -- --c.extraMetadata.version=1.1.33-dev
