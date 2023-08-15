@@ -37,6 +37,7 @@
     "prepare": "husky install",
     "release": "gh release create 1.0.16 ./dist/*.exe ./dist/*.dmg ./dist/*.deb",
     "release-init": "./scripts/release",
+    "r": "electron-builder --publish always",
     "clear-electron-cache": "rm -rf '~/Library/Application Support/lumerin-wallet-desktop'",
     "clear-cache:eslint": "rm -rf node_modules/.cache/eslint-loader"
   },
@@ -141,7 +142,8 @@
       "hardenedRuntime": true,
       "gatekeeperAssess": false,
       "entitlements": "./entitlements.mac.plist",
-      "entitlementsInherit": "./entitlements.mac.plist"
+      "entitlementsInherit": "./entitlements.mac.plist",
+      "publish": "github"
     },
     "linux": {
       "artifactName": "${name}.${ext}",
@@ -149,13 +151,15 @@
       "target": [
         "deb"
       ],
-      "icon": "./assets/lumerin.png"
+      "icon": "./assets/lumerin.png",
+      "publish": "github"
     },
     "win": {
       "artifactName": "${name}.${ext}",
       "target": "nsis",
       "icon": "./assets/lumerin.png",
-      "legalTrademarks": ""
+      "legalTrademarks": "",
+      "publish": "github"
     }
   },
   "config": {
