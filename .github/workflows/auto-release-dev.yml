@@ -89,4 +89,4 @@ jobs:
           echo "TITAN_LIGHTNING_POOL=$TITAN_LIGHTNING_POOL" >> .env
         shell: bash
       - name: Publish
-        run: npx electron-builder --win -p always
+        run: npm run r
