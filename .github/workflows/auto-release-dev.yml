@@ -88,5 +88,7 @@ jobs:
           #echo "ETH_NODE_ADDRESS_HTTP3=$ETH_NODE_ADDRESS_HTTP3" >> .env
           echo "TITAN_LIGHTNING_POOL=$TITAN_LIGHTNING_POOL" >> .env
         shell: bash
+      - name: Build
+        run: npm run web-build
       - name: Publish
         run: npm run r
